@@ -1,7 +1,6 @@
 package org.example.messages
 
-import com.sun.org.apache.bcel.internal.classfile.Unknown
-import org.example.characters.iCharacter
+import org.example.characters.Character
 
 class Messages {
 
@@ -53,7 +52,60 @@ class Messages {
         return ("The limit to these attribute is 15 points");
     }
 
-    fun showCharacterCharacteristics(character : iCharacter) {
+    fun showChooseCharacterName() : String {
+        return ("Your character name: ");
+    }
+
+    fun showChooseRace() : String {
+        return ("Please choose a race: ");
+    }
+
+    fun showRaces() {
+
+        val races = listOf(
+            "Anão da Montanha",
+            "Humano",
+            "Draconato",
+            "Meio-Orc",
+            "Elfo",
+            "Halfling",
+            "Gnomo da Floresta",
+            "Anão",
+            "Halfling Robusto",
+            "Gnomo das Rochas",
+            "Alto Elfo",
+            "Gnomo",
+            "Tiefling",
+            "Anão da Colina",
+            "Elfo da Floresta",
+            "Meio-Elfo",
+            "Drow",
+            "Halfling Pés-Leves"
+        )
+
+        for ((index, race) in races.withIndex()) {
+            println("${index + 1}. $race")
+        }
+    }
+
+    fun showAttributes() {
+
+        val attributes = listOf(
+            "Força",
+            "Destreza",
+            "Constituição",
+            "Inteligência",
+            "Sabedoria",
+            "Carisma"
+        );
+
+        for ((index, attribute) in attributes.withIndex()) {
+            println("${index + 1}. $attribute")
+        }
+
+    }
+
+    fun showCharacterCharacteristics(character : Character) {
 
         println("Character created successfully with the following attributes:")
         println("Name:  ${character.name}")

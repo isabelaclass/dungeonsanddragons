@@ -1,6 +1,6 @@
 package org.example
 
-import org.example.functions.Functions
+import org.example.characters.Character
 import org.example.menus.InitialMenu
 import org.example.messages.Messages
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -8,7 +8,6 @@ import org.example.messages.Messages
 fun main() {
 
     var messages: Messages = Messages();
-    var function : Functions = Functions();
     var option: Int = 0;
 
    option = InitialMenu.showInitialMenu();
@@ -19,16 +18,15 @@ fun main() {
             1 -> {
 
                 try {
-
-                    function.createCharacter();
+                    var character = Character();
+                    character.init();
+                    messages.showCharacterCharacteristics(character);
                     println(messages.showAfterCreateCharacter());
                     println(messages.showYesOrNo());
                     print(messages.showChooseAnOption());
                     option = readlnOrNull()?.toIntOrNull() ?: 0;
 
                 } catch (e: Exception) {
-                    messages.showCreateCharacter();
-                    messages.showChooseAnOption();
                     print(messages.showChooseAnOption());
                     option = readlnOrNull()?.toIntOrNull() ?: 0;
                 }

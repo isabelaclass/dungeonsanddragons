@@ -1,7 +1,7 @@
 package org.example.racas
 
-import org.example.characters.iCharacter
+import org.example.characters.Character
 
 interface iRace {
-    fun applyRaceBonus(iCharacter: iCharacter): iCharacter;
+    fun applyRaceBonus(Character: Character): Character;
 }

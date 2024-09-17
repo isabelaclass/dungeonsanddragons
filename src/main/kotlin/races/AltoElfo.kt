@@ -1,10 +1,10 @@
 package org.example.races
 
-import org.example.characters.iCharacter
+import org.example.characters.Character
 import org.example.racas.iRace
 
 class AltoElfo : iRace {
-    override fun applyRaceBonus(character: iCharacter): iCharacter {
+    override fun applyRaceBonus(character: Character): Character {
 
         character.destreza += 2;
         character.inteligencia += 1;
