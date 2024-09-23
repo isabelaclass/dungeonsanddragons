@@ -5,8 +5,17 @@ plugins {
 
 repositories {
     mavenCentral()
+    dependencyResolutionManagement {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+        repositories {
+            mavenCentral()
+            maven { url 'https://jitpack.io' }
+        }
+    }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21"
+    implementation 'com.github.isabelaclass:dungeonsanddragons:Tag'
 }
+
